@@ -35,9 +35,9 @@ def run():
       "fcm_token": "{}:APA91b{}".format(install_id, genString(134)),
       "referrer": referrer,
       "warp_enabled": False,
-      "tos": datetime.datetime.now().isoformat()[:-3] + "+02:00",
+      "tos": datetime.datetime.now().isoformat()[:-5] + "-05:00",
       "type": "Android",
-      "locale": "es_ES"
+      "locale": "en_US"
     }
     data = json.dumps(body).encode('utf8')
     headers = {
@@ -77,5 +77,5 @@ while True:
   sys.stdout.write(f"Cooldown: {cooldown} seconds" + "\n")
   time.sleep(cooldown)
 
-  sys.stdout.write(f"End: ----------------------" + "\n")
+  sys.stdout.write(f"End: ------------------" + "\n")
   sys.stdout.flush()
