@@ -49,7 +49,6 @@ def run():
     status_code = req.status_code
     return status_code
   except Exception as error:
-    print("")
     print("[×] Error:", error)
 
 g = 0
@@ -57,7 +56,8 @@ b = 0
 
 while True:
   os.system('cls' if os.name == 'nt' else 'clear')
-  animation = ["[■□□□□□□□□□] 10%","[■■□□□□□□□□] 20%", "[■■■□□□□□□□] 30%", "[■■■■□□□□□□] 40%", "[■■■■■□□□□□] 50%", "[■■■■■■□□□□] 60%", "[■■■■■■■□□□] 70%", "[■■■■■■■■□□] 80%", "[■■■■■■■■■□] 90%", "[■■■■■■■■■■] 100%"] 
+  animation = ["[■□□□□□□□□□] 10%","[■■□□□□□□□□] 20%", "[■■■□□□□□□□] 30%", "[■■■■□□□□□□] 40%", "[■■■■■□□□□□] 50%", "[■■■■■■□□□□] 60%", "[■■■■■■■□□□] 70%", "[■■■■■■■■□□] 80%", "[■■■■■■■■■□] 90%", "[■■■■■■■■■■] 100%"]
+
   for i in range(len(animation)):
     time.sleep(0.2)
     sys.stdout.write("\r[∆] Progress: " + animation[i % len(animation)])
@@ -67,8 +67,6 @@ while True:
 
   if result == 200:
     g += 1
-    print(f"\n[•] WARP+ ID: {referrer}")
-    print(f"[✓] Added: {g} GB")
     print(f"[#] Total: {g} Good {b} Bad")
     for i in range(20,1,-1):
       sys.stdout.write(f"\033[1K\r[!] Cooldown: {i} seconds")
