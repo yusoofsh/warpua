@@ -63,7 +63,7 @@ while True:
 
   if result == 200:
     added += 1
-    cooldown = os.environ.get('SEC_CD', 20)
+    cooldown = int(os.environ.get('SEC_CD', 20))
   elif result == 429:
     failed += 1
     cooldown = 30
