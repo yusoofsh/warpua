@@ -243,4 +243,3 @@
 
 ## 🍵Other Projects
 - **<a href="https://drgraph.cf/">Dr.Graph</a>: Online Anonymous Text / Pasting platform without limits.**
-- **<a href="https://drfilestreambot.t.me/">Dr.FileStreamBot</a>: Get Download / Stream links for Telegram files and use as host.**
