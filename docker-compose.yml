@@ -1,9 +1,9 @@
 version: "3.9"
 
 services:
-  warp-unlimited:
-    image: ghcr.io/thecaduceus/wla:master
-    container_name: warp-unlimited
+  warpua:
+    image: python:3
+    container_name: warpua
     environment:
       - WARP_ID=${WARP_ID}
     ports:
