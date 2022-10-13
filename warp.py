@@ -63,8 +63,12 @@ while True:
 
   if result == 200:
     added += 1
+    cooldown = os.environ.get('SEC_CD', 20)
+  else if result == 429:
+    failed += 1
+    cooldown = 60
   else:
-    failed+= 1
+    failed += 1
 
   sys.stdout.write("" + "\n")
   sys.stdout.write(f"Referrer: {referrer}" + "\n")
