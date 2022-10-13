@@ -52,8 +52,8 @@ def run():
   except Exception as error:
     return  error
 
-g = 0
-b = 0
+added = 0
+failed = 0
 
 while True:
   os.system('cls' if os.name == 'nt' else 'clear')
@@ -61,16 +61,17 @@ while True:
   result = run()
 
   if result == 200:
-    g += 1
+    added += 1
   else:
-    b += 1
+    failed+= 1
 
   sys.stdout.write("" + "\n")
   sys.stdout.write(f"Referrer: {referrer}" + "\n")
   sys.stdout.write(f"Result: {result}" + "\n")
-  sys.stdout.write(f"Total: {g}GB Added, {b}GB Failed" + "\n")
+  sys.stdout.write(f"Total: {added}GB Added, {failed}GB Failed" + "\n")
 
-  sys.stdout.write(f"Cooldown: 10 seconds" + "\n")
-  time.sleep(10)
+  cooldown = 10
+  sys.stdout.write(f"Cooldown: {cooldown} seconds" + "\n")
+  time.sleep(cooldown)
 
   sys.stdout.flush()
