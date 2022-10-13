@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   warpua:
-    image: python:3
+    image: ghcr.io/thecaduceus/wla:master
     container_name: warpua
     environment:
       - WARP_ID=${WARP_ID}
