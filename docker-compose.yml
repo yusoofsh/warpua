@@ -2,8 +2,7 @@ version: "3.9"
 
 services:
   warpua:
-    image: ghcr.io/thecaduceus/wla:master
-    container_name: warpua
+    image: python:3
     environment:
       - WARP_ID=${WARP_ID}
     ports:
