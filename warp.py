@@ -14,14 +14,14 @@ def genString(stringLength):
     letters = string.ascii_letters + string.digits
     return ''.join(random.choice(letters) for i in range(stringLength))
   except Exception as error:
-    print(error)
+    sys.stdout.write(error)
 
 def digitString(stringLength):
   try:
     digit = string.digits
     return ''.join((random.choice(digit) for i in range(stringLength)))
   except Exception as error:
-    print(error)
+    sys.stdout.write(error)
 
 url = f'https://api.cloudflareclient.com/v0a{digitString(3)}/reg'
 
@@ -65,9 +65,12 @@ while True:
   else:
     b += 1
 
-  print("\n")
-  print(f"Result: {result}")
-  print(f"Total: {g}GB Added, {b}GB Failed")
+  sys.stdout.write("\n")
+  sys.stdout.write(f"Referrer: {referrer}")
+  sys.stdout.write(f"Result: {result}")
+  sys.stdout.write(f"Total: {g}GB Added, {b}GB Failed")
 
-  print(f"Cooldown: 10 seconds")
+  sys.stdout.write(f"Cooldown: 10 seconds")
   time.sleep(10)
+
+  sys.stdout.flush()
