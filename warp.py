@@ -7,7 +7,7 @@ import time
 import os
 import sys
 
-cooldown = os.environ.get('SEC_CD', 20)
+cooldown = int(os.environ.get('SEC_CD', 20))
 referrer = os.environ.get('WARP_ID')
 
 def genString(stringLength):
