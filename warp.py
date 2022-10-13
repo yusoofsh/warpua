@@ -65,12 +65,12 @@ while True:
   else:
     b += 1
 
-  sys.stdout.write("\n")
-  sys.stdout.write(f"Referrer: {referrer}")
-  sys.stdout.write(f"Result: {result}")
-  sys.stdout.write(f"Total: {g}GB Added, {b}GB Failed")
+  sys.stdout.write("" + "\n")
+  sys.stdout.write(f"Referrer: {referrer}" + "\n")
+  sys.stdout.write(f"Result: {result}" + "\n")
+  sys.stdout.write(f"Total: {g}GB Added, {b}GB Failed" + "\n")
 
-  sys.stdout.write(f"Cooldown: 10 seconds")
+  sys.stdout.write(f"Cooldown: 10 seconds" + "\n")
   time.sleep(10)
 
   sys.stdout.flush()
