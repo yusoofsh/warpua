@@ -77,5 +77,4 @@ while True:
   sys.stdout.write(f"Cooldown: {cooldown} seconds" + "\n")
   time.sleep(cooldown)
 
-  sys.stdout.write(f"End: ------------------" + "\n")
-  sys.stdout.flush()
+  sys.stdout.write(f"End: ------------------" + "\n")]
