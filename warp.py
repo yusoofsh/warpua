@@ -70,7 +70,6 @@ while True:
   else:
     failed += 1
 
-  sys.stdout.write("" + "\n")
   sys.stdout.write(f"Referrer: {referrer}" + "\n")
   sys.stdout.write(f"Result: {result}" + "\n")
   sys.stdout.write(f"Total: {added}GB Added, {failed}GB Failed" + "\n")
@@ -78,4 +77,5 @@ while True:
   sys.stdout.write(f"Cooldown: {cooldown} seconds" + "\n")
   time.sleep(cooldown)
 
+  sys.stdout.write("" + "\n")
   sys.stdout.flush()
