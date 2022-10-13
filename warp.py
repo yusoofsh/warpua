@@ -70,7 +70,7 @@ while True:
   sys.stdout.write(f"Result: {result}" + "\n")
   sys.stdout.write(f"Total: {added}GB Added, {failed}GB Failed" + "\n")
 
-  cooldown = 10
+  cooldown = 30
   sys.stdout.write(f"Cooldown: {cooldown} seconds" + "\n")
   time.sleep(cooldown)
 
