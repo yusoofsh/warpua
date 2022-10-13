@@ -16,12 +16,14 @@ def genString(stringLength):
     return ''.join(random.choice(letters) for i in range(stringLength))
   except Exception as error:
     print(error)
+
 def digitString(stringLength):
   try:
     digit = string.digits
     return ''.join((random.choice(digit) for i in range(stringLength)))
   except Exception as error:
     print(error)
+
 url = f'https://api.cloudflareclient.com/v0a{digitString(3)}/reg'
 
 def run():
@@ -56,10 +58,10 @@ b = 0
 
 while True:
   os.system('cls' if os.name == 'nt' else 'clear')
-  animation = ["[■□□□□□□□□□] 10%","[■■□□□□□□□□] 20%", "[■■■□□□□□□□] 30%", "[■■■■□□□□□□] 40%", "[■■■■■□□□□□] 50%", "[■■■■■■□□□□] 60%", "[■■■■■■■□□□] 70%", "[■■■■■■■■□□] 80%", "[■■■■■■■■■□] 90%", "[■■■■■■■■■■] 100%"]
 
+  animation = ["[■■■■■■■■■■] 100%"]
   for i in range(len(animation)):
-    time.sleep(0.2)
+    time.sleep(1)
     sys.stdout.write("\r[∆] Progress: " + animation[i % len(animation)])
     sys.stdout.flush()
 
