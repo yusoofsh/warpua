@@ -50,7 +50,7 @@ def run():
     status_code = req.status_code
     return status_code
   except Exception as error:
-    print("Error:", error)
+    return  error
 
 g = 0
 b = 0
@@ -65,9 +65,9 @@ while True:
   else:
     b += 1
 
-  print(result)
-  print(f"Total: {g} Good, {b} Bad")
+  print("\n")
+  print(f"Result: {result}")
+  print(f"Total: {g}GB Added, {b}GB Failed")
 
-  sys.stdout.write(f"Cooldown: 20 seconds")
-  sys.stdout.flush()
+  print(f"Cooldown: 10 seconds")
   time.sleep(10)
