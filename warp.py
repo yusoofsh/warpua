@@ -6,9 +6,8 @@ import string
 import time
 import os
 import sys
-from vars import Var
 
-referrer = (Var.WARP_ID)
+referrer = (os.environ.get('WARP_ID'))
 
 def genString(stringLength):
   try:
