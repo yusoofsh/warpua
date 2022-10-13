@@ -50,7 +50,7 @@ def run():
     status_code = req.status_code
     return status_code
   except Exception as error:
-    print("[×] Error:", error)
+    print("Error:", error)
 
 g = 0
 b = 0
@@ -58,25 +58,16 @@ b = 0
 while True:
   os.system('cls' if os.name == 'nt' else 'clear')
 
-  animation = ["[■■■■■■■■■■] 100%"]
-  for i in range(len(animation)):
-    time.sleep(1)
-    sys.stdout.write("\r[∆] Progress: " + animation[i % len(animation)])
-    sys.stdout.flush()
-
   result = run()
 
   if result == 200:
     g += 1
-    print(f"[#] Total: {g} Good {b} Bad")
-    for i in range(20,1,-1):
-      sys.stdout.write(f"\033[1K\r[!] Cooldown: {i} seconds")
-      sys.stdout.flush()
-      time.sleep(1)
   else:
     b += 1
-    print(f"[#] Total: {g} Good {b} Bad")
-    for i in range(20,-1,-1):
-      sys.stdout.write(f"\033[1K\r[!] Cooldown: {i} seconds")
-      sys.stdout.flush()
-      time.sleep(1)
+
+  print(result)
+  print(f"Total: {g} Good, {b} Bad")
+
+  sys.stdout.write(f"Cooldown: 20 seconds")
+  sys.stdout.flush()
+  time.sleep(10)
