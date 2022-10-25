@@ -75,10 +75,11 @@ while True:
     else:
         failed += 1
 
+    current_date = datetime.date.today()
     current_time = time.strftime("%H:%M:%S", time.localtime())
 
     sys.stdout.write("Start: ------------------" + "\n")
-    sys.stdout.write(f"Time: {current_time}" + "\n")
+    sys.stdout.write(f"UTC: {current_date} {current_time}" + "\n")
     sys.stdout.write(f"Referrer: {referrer}" + "\n")
     sys.stdout.write(f"Result: {result}" + "\n")
     sys.stdout.write(f"Total: {added}GB Added, {failed}GB Failed" + "\n")
