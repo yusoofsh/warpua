@@ -1,0 +1,9 @@
+{
+	"python.linting.pylintArgs": [
+		"--disable=broad-except",
+		"--disable=invalid-name",
+		"--disable=consider-using-f-string",
+		"--disable=missing-module-docstring",
+		"--disable=missing-function-docstring"
+	]
+}
